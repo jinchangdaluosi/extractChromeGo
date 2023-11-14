@@ -62,7 +62,7 @@ proxies:
 - name: hysteria2-3
   type: hysteria2
   server: www.dtku48.xyz
-  port: 51665
+  port: 57298
   password: dongtaiwang.com
   fast-open: true
   sni: www.bing.com
@@ -90,9 +90,9 @@ proxy-groups:
 - name: WARP前置节点
   type: select
   proxies:
+  - 🚀 节点选择
   - ♻️ 自动选择
   - 负载均衡
-  - 🚀 节点选择
 - name: ♻️ 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
