@@ -15,6 +15,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Update Changes
+        run: |
+          git pull origin main
+  
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -33,4 +37,4 @@ jobs:
           git config --local user.name "robot"
           git add .
           git commit -m "Updated at $(date '+%Y-%m-%d %H:%M:%S')"
-          git push
+          git push origin main
