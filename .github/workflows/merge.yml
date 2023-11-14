@@ -26,8 +26,6 @@ jobs:
       - name: Run merge script
         run: python meta_merge.py 
 
-      - name: Run shadowrocket merge script
-        run: python merge.py  
       - name: Commit Changes
         run: |
           git config core.ignorecase false
