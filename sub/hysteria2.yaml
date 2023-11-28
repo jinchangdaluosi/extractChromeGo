@@ -41,14 +41,6 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: hysteria2-3
-  type: hysteria2
-  server: www.dtku48.xyz
-  port: 37151
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
 - name: hysteria2-4
   type: hysteria2
   server: 108.181.22.155
@@ -65,7 +57,6 @@ proxy-groups:
   - DIRECT
   - hysteria2-1
   - hysteria2-2
-  - hysteria2-3
   - hysteria2-4
 - name: ♻️ 自动选择
   type: url-test
@@ -75,7 +66,6 @@ proxy-groups:
   proxies:
   - hysteria2-1
   - hysteria2-2
-  - hysteria2-3
   - hysteria2-4
 - name: 🎯 全球直连
   type: select
@@ -96,7 +86,6 @@ proxy-groups:
   - ♻️ 自动选择
   - hysteria2-1
   - hysteria2-2
-  - hysteria2-3
   - hysteria2-4
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

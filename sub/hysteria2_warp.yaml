@@ -59,14 +59,6 @@ proxies:
   fast-open: true
   sni: www.bing.com
   skip-cert-verify: true
-- name: hysteria2-3
-  type: hysteria2
-  server: www.dtku48.xyz
-  port: 37151
-  password: dongtaiwang.com
-  fast-open: true
-  sni: www.bing.com
-  skip-cert-verify: true
 - name: hysteria2-4
   type: hysteria2
   server: 108.181.22.155
@@ -85,7 +77,6 @@ proxy-groups:
   - DIRECT
   - hysteria2-1
   - hysteria2-2
-  - hysteria2-3
   - hysteria2-4
 - name: WARP前置节点
   type: select
@@ -101,14 +92,12 @@ proxy-groups:
   proxies:
   - hysteria2-1
   - hysteria2-2
-  - hysteria2-3
   - hysteria2-4
 - name: 负载均衡
   type: load-balance
   proxies:
   - hysteria2-1
   - hysteria2-2
-  - hysteria2-3
   - hysteria2-4
   url: http://www.gstatic.com/generate_204
   interval: 300
@@ -132,7 +121,6 @@ proxy-groups:
   - ♻️ 自动选择
   - hysteria2-1
   - hysteria2-2
-  - hysteria2-3
   - hysteria2-4
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
